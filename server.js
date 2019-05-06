@@ -41,7 +41,7 @@ const app = express();
 // Learn more: http://expressjs.com/en/starter/static-files.html
 app.use(express.static('static_files'));
 
-// start the server at URL: http://localhost:3000/
-app.listen(5000, () => {
-  console.log('Server started at http://localhost:5000/');
-});
+const port = process.env.PORT || 5000;
+
+app.listen(port);
+
